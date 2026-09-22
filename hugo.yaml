@@ -1,0 +1,68 @@
+baseURL: "https://big-guamo.github.io/"
+languageCode: "zh-cn"
+title: "guyi's Blog"
+theme: ["PaperMod"]
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 10
+
+params:
+  env: production
+  title: "guyi's Blog"
+  description: "AI, Autonomous Driving, Engineering and Thoughts"
+  author: "guyi"
+
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowToc: true
+  TocOpen: false
+
+  homeInfoParams:
+    Title: "Hi 👋"
+    Content: >
+      记录 AI、自动驾驶、World Model、工程实践与个人思考。
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/big-guamo"
+
+menu:
+  main:
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 10
+
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 20
+
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 30
+
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 40
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+caches:
+  images:
+    dir: :cacheDir/images
