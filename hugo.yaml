@@ -27,13 +27,15 @@ params:
   TocOpen: false
 
   homeInfoParams:
-    Title: "Hi 👋"
+    Title: "Hi 👋 I'm Gu Yi"
     Content: >
-      记录 AI、自动驾驶、World Model、工程实践与个人思考。
+      记录 AI、自动驾驶、World Model、工程实践与投资。
 
   socialIcons:
     - name: github
       url: "https://github.com/big-guamo"
+    - name: email
+      url: "mailto:guyibigger@gmail.com"
 
 menu:
   main:
