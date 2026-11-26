@@ -27,14 +27,25 @@ params:
   TocOpen: false
 
   homeInfoParams:
-    Title: "Hi 👋 I'm Gu Yi"
-    Content: |
-      记录 AI、自动驾驶、World Model、工程实践与投资。
-
-      **Education**
-
-      - **Soochow University** — Bachelor's in Electronic Information Engineering, 2019–2023
-      - **National University of Singapore** — Master's in Electrical Engineering, 2023–2025
+    Title: "Hi, I'm Gu Yi."
+    Eyebrow: "Algorithms & Autonomous Driving"
+    Content: "Notes on AI, autonomous driving, world models, engineering, and investing."
+    Experience:
+      - company: "Yinwang"
+        context: "Huawei Intelligent Automotive Solution BU"
+        role: "Algorithm Engineer"
+        team: "ADS Research"
+        start: "2025"
+        end: "Present"
+    Education:
+      - institution: "National University of Singapore"
+        degree: "Master's in Electrical Engineering"
+        start: "2023"
+        end: "2025"
+      - institution: "Soochow University"
+        degree: "Bachelor's in Electronic Information Engineering"
+        start: "2019"
+        end: "2023"
 
   socialIcons:
     - name: github

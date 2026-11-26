@@ -1,0 +1,58 @@
+{{- with site.Params.homeInfoParams }}
+<article class="profile-home" lang="en" aria-labelledby="profile-title">
+    <header class="profile-intro">
+        {{- with .Eyebrow }}<p class="profile-eyebrow">{{ . }}</p>{{- end }}
+        <h1 id="profile-title">{{ .Title }}</h1>
+        <p class="profile-description">{{ .Content }}</p>
+        <div class="profile-contact">
+            {{- range site.Params.socialIcons }}
+            <a href="{{ .url | safeURL }}"{{ if eq .name "github" }} target="_blank" rel="noopener noreferrer me"{{ end }}>
+                <span aria-hidden="true">{{ partial "svg.html" . }}</span>
+                <span>{{ if eq .name "github" }}GitHub{{ else if eq .name "email" }}Email{{ else }}{{ .name | title }}{{ end }}</span>
+            </a>
+            {{- end }}
+        </div>
+    </header>
+
+    <div class="profile-background">
+        {{- with .Experience }}
+        <section class="profile-section" aria-labelledby="experience-title">
+            <h2 id="experience-title" class="profile-section-title">Experience</h2>
+            <ol class="profile-entries">
+                {{- range . }}
+                <li class="profile-entry">
+                    <div class="profile-entry-heading">
+                        <h3>{{ .company }}</h3>
+                        <p class="profile-dates"><time datetime="{{ .start }}">{{ .start }}</time><span aria-hidden="true">—</span><span>{{ .end }}</span></p>
+                    </div>
+                    <p class="profile-company-context">{{ .context }}</p>
+                    <p class="profile-role">{{ .role }}<span class="profile-separator" aria-hidden="true">·</span>{{ .team }}</p>
+                </li>
+                {{- end }}
+            </ol>
+        </section>
+        {{- end }}
+
+        {{- with .Education }}
+        <section class="profile-section" aria-labelledby="education-title">
+            <h2 id="education-title" class="profile-section-title">Education</h2>
+            <ol class="profile-entries">
+                {{- range . }}
+                <li class="profile-entry">
+                    <div class="profile-entry-heading">
+                        <h3>{{ .institution }}</h3>
+                        <p class="profile-dates"><time datetime="{{ .start }}">{{ .start }}</time><span aria-hidden="true">—</span><time datetime="{{ .end }}">{{ .end }}</time></p>
+                    </div>
+                    <p class="profile-degree">{{ .degree }}</p>
+                </li>
+                {{- end }}
+            </ol>
+        </section>
+        {{- end }}
+    </div>
+</article>
+{{- end }}
+<div class="profile-writing-heading" lang="en">
+    <h2>Latest writing</h2>
+    <a href="{{ "posts/" | relURL }}">All posts <span aria-hidden="true">↗</span></a>
+</div>
