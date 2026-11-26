@@ -28,8 +28,13 @@ params:
 
   homeInfoParams:
     Title: "Hi 👋 I'm Gu Yi"
-    Content: >
+    Content: |
       记录 AI、自动驾驶、World Model、工程实践与投资。
+
+      **Education**
+
+      - **Soochow University** — Bachelor's in Electronic Information Engineering, 2019–2023
+      - **National University of Singapore** — Master's in Electrical Engineering, 2023–2025
 
   socialIcons:
     - name: github
